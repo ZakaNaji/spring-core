@@ -8,10 +8,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Owner {
 
-    @Autowired
     private Cat cat;
 
 
@@ -19,11 +17,14 @@ public class Owner {
         return cat;
     }
 
+    public void setCat(Cat cat) {
+        this.cat = cat;
+    }
 
-    //@Override
-    //public String toString() {
-    //    return "Owner{" +
-    //            "cat=" + cat +
-    //            '}';
-    //}
+    @Override
+    public String toString() {
+        return "Owner{" +
+                "cat=" + cat +
+                '}';
+    }
 }

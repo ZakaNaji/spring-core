@@ -17,8 +17,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        try (var ctx = new AnnotationConfigApplicationContext(Config.class)) {
-            System.out.println(ctx.getMessage("alert.hi",null, Locale.FRENCH));
+        try (var ctx = new AnnotationConfigApplicationContext()) {
+            ctx.getEnvironment().setActiveProfiles("outside");
+            ctx.register(Config.class);
+            ctx.refresh();
+            Owner ow = ctx.getBean(Owner.class);
+            System.out.println(ow);
         }
     }
 }
