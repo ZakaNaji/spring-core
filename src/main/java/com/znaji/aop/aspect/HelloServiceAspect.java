@@ -10,7 +10,10 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class HelloServiceAspect {
 
-    @Around("execution(* com.znaji.aop.service.HelloService.*(..))")
+    @Pointcut("execution(* com.znaji.aop.service.HelloService.*(..))")
+    public void helloServicePointCut(){};
+
+    @Around("helloServicePointCut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("before " + joinPoint.getSignature().getName());
         Object message = joinPoint.proceed();
