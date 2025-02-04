@@ -1,14 +1,8 @@
-package com.znaji.config;
+package com.znaji.context.config;
 
-import com.znaji.beans.BannerLoader;
-import com.znaji.beans.Cat;
-import com.znaji.beans.Owner;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.MessageSource;
+import com.znaji.context.beans.Cat;
+import com.znaji.context.beans.Owner;
 import org.springframework.context.annotation.*;
-import org.springframework.context.support.ResourceBundleMessageSource;
-import org.springframework.core.io.Resource;
 
 @Configuration
 @ComponentScan(basePackages = "com.znaji.beans")

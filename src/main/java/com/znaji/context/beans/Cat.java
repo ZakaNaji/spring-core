@@ -1,4 +1,4 @@
-package com.znaji.beans;
+package com.znaji.context.beans;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.BeanNameAware;

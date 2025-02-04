@@ -1,4 +1,4 @@
-package com.znaji.beans;
+package com.znaji.context.beans;
 
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
