@@ -5,10 +5,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloService {
 
-    public void printHello(String name) {
+    public String printHello(String name) {
         System.out.println(
                 "Hello " + name
         );
-        throw new RuntimeException("Ooops!!");
+        return "Hello " + name;
+    }
+
+    public String printGoodBye(String name) {
+        var message = "Goodbye Mr. " + name;
+        System.out.println(message);
+        return message;
     }
 }
