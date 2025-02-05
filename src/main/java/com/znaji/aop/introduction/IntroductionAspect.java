@@ -13,4 +13,10 @@ public class IntroductionAspect {
             defaultImpl = MaxCalculatorImpl.class
     )
     MaxCalculator maxCalculator;
+
+    @DeclareParents(
+            value = "com.znaji.aop.introduction.StandardCalculator",
+            defaultImpl = SimpleCounter.class
+    )
+    Counter counter;
 }
