@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan(basePackages = {"com.znaji.aop.service", "com.znaji.aop.aspect", "com.znaji.aop.introduction"})
+@ComponentScan(basePackages = {"com.znaji.aop.service", "com.znaji.aop.aspect", "com.znaji.aop.introduction", "com.znaji.context.events"})
 @EnableAspectJAutoProxy
 public class AopConfig {
 }
